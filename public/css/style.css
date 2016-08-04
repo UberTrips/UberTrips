@@ -1,5 +1,36 @@
+@import 'https://fonts.googleapis.com/css?family=Bungee+Inline';
+
 body{
-  background-color: white;
+  background-color: snow;
   font-family: 'Open Sans',sans-serif;
-  width: 750px;
+  width: 960px;
+  margin: 0 auto;
+}
+#container{
+  width: 100%;
+  max-width: 100%;
+  clear: both;
+  margin: 0 auto;
+}
+
+#logo{
+  font-family: 'Bungee Inline',sans-serif;
+  text-align: center;
+}
+
+#uberform{
+  margin: 0 auto;
+  margin-bottom: 150px;
+  margin-top: 50px;
+  width: 450px;
+}
+
+#uberform input{
+  width: 100%;
+}
+input#SubmitBtn{
+  background-color: black;
+  color: white;
+  height: 45px;
+
 }

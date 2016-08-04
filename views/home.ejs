@@ -4,12 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<<<<<<< HEAD
-  <title>UberTrips</title>
-=======
+  <title>UberTrips Test</title>
   <title>Home Page</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.bundle.js">
->>>>>>> 7111bdea30c5379e0b43ad45778a44b29718000a
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -18,16 +15,293 @@
 <body>
   <div class="container">
   <section id="top">
-    <h1>UberTrips</h1>
+    <h1 id="logo">UberTrips Test</h1>
   </section>
   <section>
-    <form action="home_submit" method="get">
-      <input type="text" name="time" placeholder="Morning | Evening | Night">
-      <input type="text" name="zipcode" placeholder="Zipcode">
-      <input type="submit" name="Submit">
+    <form action="home_submit" method="get" id="uberform">
+    <label for="hood_id">Neighborhood ID</label>
+      <select class="u-full-width" id="hood_id">
+        <option value="Option 1">1: EWR, Newark Airport</option>
+        <option value="Option 2">2: Queens, Jamaica Bay</option>
+        <option value="Option 3">3: Bronx, Allerton/Pelham Gardens</option>
+        <option value="Option 4">4: Manhattan, Alphabet City</option>
+        <option value="Option 5">5: Staten Island, Arden Heights</option>
+        <option value="Option 6">6: Staten Island, Arrochar/Fort Wadsworth</option>
+        <option value="Option 7">7: Queens, Astoria</option>
+        <option value="Option 8">8: Queens, Astoria Park</option>
+        <option value="Option 9">9: Queens, Auburndale</option>
+        <option value="Option 10">10: Queens, Baisley Park</option>
+        <option value="Option 11">11: Brooklyn, Bath Beach</option>
+        <option value="Option 12">12: Manhattan, Battery Park</option>
+        <option value="Option 13">13: Manhattan, Battery Park City</option>
+        <option value="Option 14">14: Brooklyn, Bay Ridge</option>
+        <option value="Option 15">15: Queens, Bay Terrace/Fort Totten</option>
+        <option value="Option 16">16: Queens, Bayside</option>
+        <option value="Option 17">17: Brooklyn, Bedford</option>
+        <option value="Option 18">18: Bronx, Bedford Park</option>
+        <option value="Option 19">19: Queens, Bellerose</option>
+        <option value="Option 20">20: Bronx, Belmont</option>
+        <option value="Option 21">21: Brooklyn, Bensonhurst East</option>
+        <option value="Option 22">22: Brooklyn, Bensonhurst West</option>
+        <option value="Option 23">23: Staten Island, Bloomfield/Emerson Hill</option>
+        <option value="Option 24">24: Manhattan, Bloomingdale</option>
+        <option value="Option 25">25: Brooklyn, Boerum Hill</option>
+        <option value="Option 26">26: Brooklyn, Borough Park</option>
+        <option value="Option 27">27: Queens, Breezy Point/Fort Tilden/Riis Beach</option>
+        <option value="Option 28">28: Queens, Briarwood/Jamaica Hills</option>
+        <option value="Option 29">29: Brooklyn, Brighton Beach</option>
+        <option value="Option 30">30: Queens,Broad Channel</option>
+        <option value="Option 31">31: Bronx, Bronx Park</option>
+        <option value="Option 32">32: Bronx, Bronxdale</option>
+        <option value="Option 33">33: Brooklyn, Brooklyn Heights</option>
+        <option value="Option 34">34: Brooklyn, Brooklyn Navy Yard</option>
+        <option value="Option 35">35: Brooklyn, Brownsville</option>
+        <option value="Option 36">36: Brooklyn, Bushwick North</option>
+        <option value="Option 37">37: Brooklyn, Bushwick South</option>
+        <option value="Option 38">38: Queens, Cambria Heights</option>
+        <option value="Option 39">39: Brooklyn, Canarsie</option>
+        <option value="Option 40">40: Brooklyn, Carroll Gardens</option>
+        <option value="Option 41">41: Manhattan, Central Harlem</option>
+        <option value="Option 42">42: Manhattan, Central Harlem North</option>
+        <option value="Option 43">43: Manhattan, Central Park</option>
+        <option value="Option 44">44: Staten Island, Charleston/Tottenville</option>
+        <option value="Option 45">45: Manhattan, Chinatown</option>
+        <option value="Option 46">46: Bronx, City Island</option>
+        <option value="Option 47">47: Bronx, Claremont/Bathgate</option>
+        <option value="Option 48">48: Manhattan, Clinton East</option>
+        <option value="Option 49">49: Brooklyn, Clinton Hill</option>
+        <option value="Option 50">50: Manhattan, Clinton West</option>
+        <option value="Option 51">51: Bronx, Co-Op City</option>
+        <option value="Option 52">52: Brooklyn, Cobble Hill</option>
+        <option value="Option 53">53: Queens, College Point</option>
+        <option value="Option 54">54: Brooklyn, Columbia Street</option>
+        <option value="Option 55">55: Brooklyn, Coney Island</option>
+        <option value="Option 56">56: Queens, Corona</option>
+        <option value="Option 57">57: Queens, Corona</option>
+        <option value="Option 58">58: Bronx, Country Club</option>
+        <option value="Option 59">59: Bronx, Crotona Park</option>
+        <option value="Option 60">60: Bronx, Crotona Park East</option>
+        <option value="Option 61">61: Brooklyn, Crown Heights North</option>
+        <option value="Option 62">62: Brooklyn, Crown Heights South</option>
+        <option value="Option 63">63: Brooklyn, Cypress Hills</option>
+        <option value="Option 64">64: Queens, Douglaston</option>
+        <option value="Option 65">65: Brooklyn, Downtown Brooklyn/MetroTech</option>
+        <option value="Option 66">66: Brooklyn, DUMBO/Vinegar Hill</option>
+        <option value="Option 67">67: Brooklyn, Dyker Heights</option>
+        <option value="Option 68">68: Manhattan, East Chelsea</option>
+        <option value="Option 69">69: Bronx, East Concourse/Concourse Village</option>
+        <option value="Option 70">70: Queens, East Elmhurst</option>
+        <option value="Option 71">71: Brooklyn, East Flatbush/Farragut</option>
+        <option value="Option 72">72: Brooklyn, East Flatbush/Remsen Village</option>
+        <option value="Option 73">73: Queens, East Flushing</option>
+        <option value="Option 74">74: Manhattan, East Harlem North</option>
+        <option value="Option 75">75: Manhattan, East Harlem South</option>
+        <option value="Option 76">76: Brooklyn, East New York</option>
+        <option value="Option 77">77: Brooklyn, East New York/Pennsylvania Avenue</option>
+        <option value="Option 78">78: Bronx, East Tremont</option>
+        <option value="Option 79">79: Manhattan, East Village</option>
+        <option value="Option 80">80: Brooklyn, East Williamsburg</option>
+        <option value="Option 81">81: Bronx, Eastchester</option>
+        <option value="Option 82">82: Queens, Elmhurst</option>
+        <option value="Option 83">83: Queens, Elmhurst/Maspeth</option>
+        <option value="Option 84">84: Staten Island, Eltingville/Annadale/Prince's Bay</option>
+        <option value="Option 85">85: Brooklyn, Erasmus</option>
+        <option value="Option 86">86: Queens, Far Rockaway</option>
+        <option value="Option 87">87: Manhattan, Financial District North</option>
+        <option value="Option 88">88: Manhattan, Financial District South</option>
+        <option value="Option 89">89: Brooklyn, Flatbush/Ditmas Park</option>
+       <option value="Option 90">90: Manhattan, Flatiron</option>
+       <option value="Option 91">91: Brooklyn, Flatlands</option>
+        <option value="Option 92">92: Queens, Flushing</option>
+        <option value="Option 93">93: Queens, Flushing Meadows-Corona Park</option>
+        <option value="Option 94">94: Bronx, Fordham South</option>
+        <option value="Option 95">95: Queens, Forest Hills</option>
+        <option value="Option 96">96: Queens, Forest Park/Highland Park</option>
+        <option value="Option 97">97: Brooklyn, Fort Greene</option>
+        <option value="Option 98">98: Queens, Fresh Meadows</option>
+        <option value="Option 99">99: Staten Island, Freshkills Park</option>
+        <option value="Option 100">100: Manhattan, Garment District</option>
+        <option value="Option 101">101: Queens, Glen Oaks</option>
+        <option value="Option 102">102: Queens, Glendale</option>
+        <option value="Option 103">103: Manhattan, Governor's Island/Ellis Island/Liberty Island</option>
+        <option value="Option 104">104: Manhattan, Governor's Island/Ellis Island/Liberty Island</option>
+        <option value="Option 105">105: Manhattan, Governor's Island/Ellis Island/Liberty Island</option>
+        <option value="Option 106">106: Brooklyn, Gowanus</option>
+        <option value="Option 107">107: Manhattan, Gramercy</option>
+        <option value="Option 108">108: Brooklyn, Gravesend</option>
+        <option value="Option 109">109: Staten Island, Great Kills</option>
+        <option value="Option 110">110: Staten Island, Great Kills Park</option>
+        <option value="Option 111">111: Brooklyn, Green-Wood Cemetery</option>
+        <option value="Option 112">112: Brooklyn, Greenpoint</option>
+        <option value="Option 113">113: Manhattan, Greenwich Village North</option>
+        <option value="Option 114">114: Manhattan, Greenwich Village South</option>
+        <option value="Option 115">115: Staten Island, Grymes Hill/Clifton</option>
+        <option value="Option 116">116: Manhattan, Hamilton Heights</option>
+        <option value="Option 117">117: Queens, Hammels/Arverne</option>
+        <option value="Option 118">118: Staten Island, Heartland Village/Todt Hill</option>
+        <option value="Option 119">119: Bronx, Highbridge</option>
+        <option value="Option 120">120: Manhattan, Highbridge Park</option>
+        <option value="Option 121">121: Queens, Hillcrest/Pomonok</option>
+        <option value="Option 122">122: Queens, Hollis</option>
+        <option value="Option 123">123: Brooklyn, Homecrest</option>
+        <option value="Option 124">124: Queens, Howard Beach</option>
+        <option value="Option 125">125: Manhattan, Hudson Sq</option>
+        <option value="Option 126">126: Bronx, Hunts Point</option>
+        <option value="Option 127">127: Manhattan, Inwood</option>
+        <option value="Option 128">128: Manhattan, Inwood Hill Park</option>
+        <option value="Option 129">129: Queens, Jackson Heights</option>
+        <option value="Option 130">130: Queens, Jamaica</option>
+        <option value="Option 131">131: Queens,Jamaica Estates</option>
+        <option value="Option 132">132: Queens, JFK Airport</option>
+        <option value="Option 133">133: Brooklyn, Kensington</option>
+        <option value="Option 134">134: Queens, Kew Gardens</option>
+        <option value="Option 135">135: Queens, Kew Gardens Hills</option>
+        <option value="Option 136">136: Bronx, Kingsbridge Heights</option>
+        <option value="Option 137">137: Manhattan, Kips Bay</option>
+        <option value="Option 138">138: Queens, LaGuardia Airport</option>
+        <option value="Option 139">139: Queens, Laurelton</option>
+        <option value="Option 140">140: Manhattan, Lenox Hill East</option>
+        <option value="Option 141">141: Manhattan, Lenox Hill West</option>
+        <option value="Option 142">142: Manhattan, Lincoln Square East</option>
+        <option value="Option 143">143: Manhattan, Lincoln Square West</option>
+        <option value="Option 144">144: Manhattan, Little Italy/NoLiTa</option>
+        <option value="Option 145">145: Queens, Long Island City/Hunters Point</option>
+        <option value="Option 146">146: Queens, Long Island City/Queens Plaza</option>
+        <option value="Option 147">147: Bronx, Longwood</option>
+        <option value="Option 148">148: Manhattan, Lower East Side</option>
+        <option value="Option 149">149: Brooklyn, Madison</option>
+        <option value="Option 150">150: Brooklyn, Manhattan Beach</option>
+        <option value="Option 151">151: Manhattan, Manhattan Valley</option>
+        <option value="Option 152">152: Manhattan, Manhattanville</option>
+        <option value="Option 153">153: Manhattan, Marble Hill</option>
+        <option value="Option 154">154: Brooklyn, Marine Park/Floyd Bennett Field</option>
+        <option value="Option 155">155:Brooklyn, Marine Park/Mill Basin</option>
+        <option value="Option 156">156: Staten Island, Mariners Harbor</option>
+        <option value="Option 157">157: Queens, Maspeth</option>
+        <option value="Option 158">158: Manhattan, Meatpacking/West Village West</option>
+        <option value="Option 159">159: Bronx, Melrose South</option>
+        <option value="Option 160">160: Queens, Middle Village</option>
+        <option value="Option 161">161: Manhattan, Midtown Center</option>
+        <option value="Option 162">162: Manhattan, Midtown East</option>
+        <option value="Option 163">163: Manhattan, Midtown North</option>
+        <option value="Option 164">164: Manhattan, Midtown South</option>
+        <option value="Option 165">165: Brooklyn, Midwood</option>
+        <option value="Option 166">166: Manhattan, Morningside Heights</option>
+        <option value="Option 167">167: Bronx, Morrisania/Melrose</option>
+        <option value="Option 168">168: Bronx, Mott Haven/Port Morris</option>
+        <option value="Option 169">169: Bronx, Mount Hope</option>
+        <option value="Option 170">170: Manhattan, Murray Hill</option>
+        <option value="Option 171">171: Queens, Murray Hill-Queens</option>
+        <option value="Option 172">172: Staten Island, New Dorp/Midland Beach</option>
+        <option value="Option 173">173: Queens, North Corona</option>
+        <option value="Option 174">174: Bronx, Norwood</option>
+        <option value="Option 175">175: Queens, Oakland Gardens</option>
+        <option value="Option 176">176: Staten Island, Oakwood</option>
+        <option value="Option 177">177: Brooklyn, Ocean Hill</option>
+        <option value="Option 178">178: Brooklyn, Ocean Parkway South</option>
+        <option value="Option 179">179: Queens, Old Astoria</option>
+        <option value="Option 180">180: Queens, Ozone Park</option>
+        <option value="Option 181">181: Brooklyn, Park Slope</option>
+        <option value="Option 182">182: Bronx, Parkchester</option>
+        <option value="Option 183">183: Bronx, Pelham Bay</option>
+        <option value="Option 184">184: Bronx, Pelham Bay Park</option>
+        <option value="Option 185">185: Bronx, Pelham Parkway</option>
+        <option value="Option 186">186: Manhattan, Penn Station/Madison Sq West</option>
+        <option value="Option 187">187: Staten Island, Port Richmond</option>
+        <option value="Option 188">188: Brooklyn, Prospect-Lefferts Gardens</option>
+        <option value="Option 189">189: Brooklyn, Prospect Heights</option>
+        <option value="Option 190">190: Brooklyn, Prospect Park</option>
+        <option value="Option 191">191: Queens, Queens Village</option>
+        <option value="Option 192">192: Queens, Queensboro Hill</option>
+        <option value="Option 193">193: Queens, Queensbridge/Ravenswood</option>
+        <option value="Option 194">194: Manhattan, Randalls Island</option>
+        <option value="Option 195">195: Brooklyn, Red Hook</option>
+        <option value="Option 196">196: Queens, Rego Park</option>
+        <option value="Option 197">197: Queens, Richmond Hill</option>
+        <option value="Option 198">198: Queens, Ridgewood</option>
+        <option value="Option 199">199: Bronx, Rikers Island</option>
+        <option value="Option 200">200: Bronx, Riverdale/North Riverdale/Fieldston</option>
+        <option value="Option 201">201: Queens, Rockaway Park</option>
+        <option value="Option 202">202: Manhattan, Roosevelt Island</option>
+        <option value="Option 203">203: Queens, Rosedale</option>
+        <option value="Option 204">204: Staten Island, Rossville/Woodrow</option>
+        <option value="Option 205">205: Queens, Saint Albans</option>
+        <option value="Option 206">206: Staten Island, Saint George/New Brighton</option>
+        <option value="Option 207">207: Queens, Saint Michaels Cemetery/Woodside</option>
+        <option value="Option 208">208: Bronx, Schuylerville/Edgewater Park</option>
+        <option value="Option 209">209: Manhattan, Seaport</option>
+        <option value="Option 210">210: Brooklyn, Sheepshead Bay</option>
+        <option value="Option 211">211: Manhattan, SoHo</option>
+        <option value="Option 212">212: Bronx, Soundview/Bruckner</option>
+        <option value="Option 213">213: Bronx, Soundview/Castle Hill</option>
+        <option value="Option 214">214: Staten Island, South Beach/Dongan Hills</option>
+        <option value="Option 215">215: Queens, South Jamaica</option>
+        <option value="Option 216">216: Queens, South Ozone Park</option>
+        <option value="Option 217">217: Brooklyn, South Williamsburg</option>
+        <option value="Option 218">218: Queens, Springfield Gardens North</option>
+        <option value="Option 219">219: Queens, Springfield Gardens South</option>
+        <option value="Option 220">220: Bronx, Spuyten Duyvil/Kingsbridge</option>
+        <option value="Option 221">221: Staten Island, Stapleton</option>
+        <option value="Option 222">222: Brooklyn, Starrett City</option>
+        <option value="Option 223">223: Queens, Steinway</option>
+        <option value="Option 224">224: Manhattan, Stuy Town/Peter Cooper Village</option>
+        <option value="Option 225">225: Brooklyn, Stuyvesant Heights</option>
+        <option value="Option 226">226: Queens, Sunnyside</option>
+        <option value="Option 227">227: Brooklyn, Sunset Park East</option>
+        <option value="Option 228">228: Brooklyn, Sunset Park West</option>
+        <option value="Option 229">229: Manhattan, Sutton Place/Turtle Bay North</option>
+        <option value="Option 230">230: Manhattan, Times Sq/Theatre District</option>
+        <option value="Option 231">231: Manhattan, TriBeCa/Civic Center</option>
+        <option value="Option 232">232: Manhattan, Two Bridges/Seward Park</option>
+        <option value="Option 233">233: Manhattan, UN/Turtle Bay South</option>
+        <option value="Option 234">234: Manhattan, Union Sq</option>
+        <option value="Option 235">235: Bronx, University Heights/Morris Heights</option>
+        <option value="Option 236">236: Manhattan, Upper East Side North</option>
+        <option value="Option 237">237: Manhattan, Upper East Side South</option>
+        <option value="Option 238">238: Manhattan, Upper West Side North</option>
+        <option value="Option 239">239: Manhattan, Upper West Side South</option>
+        <option value="Option 240">240: Bronx, Van Cortlandt Park</option>
+        <option value="Option 241">241: Bronx, Van Cortlandt Village</option>
+        <option value="Option 242">242: Bronx, Van Nest/Morris Park</option>
+        <option value="Option 243">243: Manhattan, Washington Heights North</option>
+        <option value="Option 244">244: Manhattan, Washington Heights South</option>
+        <option value="Option 245">245: Staten Island, West Brighton</option>
+        <option value="Option 246">246: Manhattan, West Chelsea/Hudson Yards</option>
+        <option value="Option 247">247: Bronx, West Concourse</option>
+        <option value="Option 248">248: Bronx, West Farms/Bronx River</option>
+        <option value="Option 249">249: Manhattan, West Village</option>
+        <option value="Option 250">250: Bronx, Westchester Village/Unionport</option>
+        <option value="Option 251">251: Staten Island, Westerleigh</option>
+        <option value="Option 252">252: Queens, Whitestone</option>
+        <option value="Option 253">253: Queens, Willets Point</option>
+        <option value="Option 254">254: Bronx, Williamsbridge/Olinville</option>
+        <option value="Option 255">255: Brooklyn, Williamsburg (North Side)</option>
+        <option value="Option 256">256: Brooklyn, Williamsburg (South Side)</option>
+        <option value="Option 257">257: Brooklyn, Windsor Terrace</option>
+        <option value="Option 258">258: Queens, Woodhaven</option>
+        <option value="Option 259">259: Bronx, Woodlawn/Wakefield</option>
+        <option value="Option 260">260: Queens, Woodside</option>
+        <option value="Option 261">261: Manhattan, World Trade Center</option>
+        <option value="Option 262">262: Manhattan, Yorkville East</option>
+        <option value="Option 263">263: Manhattan, Yorkville West</option>
+        <option value="Option 264">264: Unknown, Unknown</option>
+        <option value="Option 265">265: Unknown, Unknown</option>
+      </select>
+
+      <label>Time of Day</label>
+      <p>please enter an hour</p>
+      <input type="number" name="day_period" placeholder="24 hour format">
+      <label>Day of The Week</label>
+      <input type="number" name="day_of_week" placeholder="0 is Monday">
+      <input type="submit" name="Submit" id="SubmitBtn">
     </form>
+  </section>
+  <section>
+   <h2>Visual Data</h2>
+   <hr>
+    <canvas id="myChart" width="400" height="400"></canvas>
+    <script src="js/Chart.js"></script>
   </section>
   </div>
 </body>
 </html>
-
