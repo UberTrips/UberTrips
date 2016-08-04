@@ -1,7 +1,9 @@
-body{
-  /*background-color: red;*/
-}
+
 #chart{
   height: 400px;
   width: 400px;
+  background-color: white;
+  font-family: 'Open Sans',sans-serif;
+  width: 750px;
+
 }
