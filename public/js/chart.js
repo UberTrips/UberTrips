@@ -4,22 +4,22 @@ $(document).ready(function($) {
   let chartData = {
     type: 'pie',
     data: {
-      labels: ["Red", "Blue", "Yellow"],
+      labels: ["Taxi", "Uber"],
       datasets: [{
-        label: '# of Votes',
-        data: [12, 19, 3],
+        label: 'Probability of finding Taxi VS Uber',
+        data: [0.6, 0.4],
         backgroundColor: [
           'rgba(255, 99, 132, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)'
+          'rgba(54, 162, 235, 0.2)'
+          // 'rgba(255, 206, 86, 0.2)'
           // 'rgba(75, 192, 192, 0.2)',
           // 'rgba(153, 102, 255, 0.2)',
           // 'rgba(255, 159, 64, 0.2)'
         ],
         borderColor: [
           'rgba(255,99,132,1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)'
+          'rgba(54, 162, 235, 1)'
+          // 'rgba(255, 206, 86, 1)'
           // 'rgba(75, 192, 192, 1)',
           // 'rgba(153, 102, 255, 1)',
           // 'rgba(255, 159, 64, 1)'
@@ -44,7 +44,7 @@ $(document).ready(function($) {
     //make an ajax call
   let hood = 2
   let period = 3
-  let day = 6
+  // let day = 6
   $.get('http://localhost:3000/api?hood_id='+hood+'&day_period='+period+'&day_of_week='+day).done(data=>{
     console.log(data)
     chartData.data.datasets[0].data = data["taxi_prob"]
