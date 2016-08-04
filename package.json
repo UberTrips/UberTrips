@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "Uber tips analysis Manhattan data",
   "main": "app.js",
+  "engines": {
+    "node": "6.2.0"
+  },
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -23,6 +27,7 @@
     "method-override": "^2.3.6",
     "mongodb": "^2.2.5",
     "morgan": "^1.7.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "request": "^2.74.0"
   }
 }

@@ -8,7 +8,7 @@ const app                       = express();
 
 // const homeController            = require("./controllers/home_controller")
 
-
+const apiController             = require("./controller/api_controller")
 
 
 app.set("view engine", "ejs")
@@ -26,6 +26,10 @@ app.use(bodyParser.json())
 app.get('/' , (req, res)=>{
   res.render('home')
 })
+
+app.use("/api", apiController)
+
+
 
 app.listen(PORT, function(){
   console.log("Server is listening on port : ", PORT);

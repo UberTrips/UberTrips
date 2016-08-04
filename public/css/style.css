@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import 'https://fonts.googleapis.com/css?family=Bungee+Inline';
 
 body{
@@ -32,5 +33,14 @@ input#SubmitBtn{
   background-color: black;
   color: white;
   height: 45px;
+=======
+
+#chart{
+  height: 400px;
+  width: 400px;
+  background-color: white;
+  font-family: 'Open Sans',sans-serif;
+  width: 750px;
+>>>>>>> 5124dfd877c10664e8995a67676c382534fe9959
 
 }
