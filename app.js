@@ -24,7 +24,7 @@ app.use(bodyParser.json())
 
 // app.use("/", )
 app.get('/' , (req, res)=>{
-  res.send("Hello, world")
+  res.render('home')
 })
 
 app.listen(PORT, function(){
