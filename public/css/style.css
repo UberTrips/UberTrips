@@ -35,6 +35,7 @@ input#SubmitBtn{
 }
 
 #chart {
+  /*display:none;*/
   height: 400px;
   width: 400px;
   background-color: white;

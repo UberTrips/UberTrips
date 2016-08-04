@@ -8,11 +8,11 @@ router.get('/dummy', function(req, res){
 })
 
 router.get('/', function(req, res){
-  let hood_id = req.query['hood_id']
-  let day_period = req.query['day_period']
+  let hour = req.query['hour']
+  // let day_period = req.query['day_period']
   let day_of_week = req.query['day_of_week']
 
-  request.get('http://127.0.0.1:4000/predict?hood_id='+hood_id+'&day_period='+day_period+'&day_of_week='+day_of_week , (err,response,body)=>{
+  request.get('http://127.0.0.1:4000/predict?hour='+hour+'&day_of_week='+day_of_week , (err,response,body)=>{
     console.log(body)
     res.send(JSON.parse(body))
   })

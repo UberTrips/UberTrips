@@ -39,20 +39,21 @@ $(document).ready(function($) {
   }
 
   var myChart = new Chart(ctx, chartData);
-
-  setTimeout(()=>{
-    //make an ajax call
-  let hood = 2
-  let period = 3
+  // $('#chart').fadeIn()
+   $('#uberform').submit((event)=>{
+     //make an ajax call
+     event.preventDefault()
+  let hour = event.target["day_period"].value
+  let day = event.target["day_of_week"].value
   // let day = 6
-  $.get('http://localhost:3000/api?hood_id='+hood+'&day_period='+period+'&day_of_week='+day).done(data=>{
+  $.get('http://127.0.0.1:3000/api?hour='+hour+'&day_of_week='+day).done(data=>{
     console.log(data)
-    chartData.data.datasets[0].data = data["taxi_prob"]
+    chartData.data.datasets[0].data = [data["Chances of Taxi or Car Service"], data["Chances of an Uber"]]
     myChart.update()
 
-    console.log(myChart)
+    // console.log(myChart)
   })
-  },2000)
+   })
 
 });
 
