@@ -1,3 +1,7 @@
 body{
   /*background-color: red;*/
 }
+#chart{
+  height: 400px;
+  width: 400px;
+}
